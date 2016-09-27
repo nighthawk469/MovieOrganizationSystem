@@ -1,0 +1,39 @@
+{% load staticfiles %}
+
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" type="text/css" href="{% static 'start/style.css' %}" />
+
+
+<div class="container">
+<div class="col-xs-8 col-xs-offset-2">
+		<h1>Movies</h1>
+
+		<div class="dropdown">
+			<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+				Sort By
+				<span class="caret"></span>
+			</button>
+			<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+				<li><a href="{% url 'start:index' %}?sort_by=rating">Rating</a></li>
+				<li><a href="{% url 'start:index' %}?sort_by=release_date">Release Date</a></li>
+			</ul>
+		</div>
+
+		<br>
+
+		<div class="col-md-12 ">
+			<body>
+				<ul class="bigger">
+					{% for movie in movies %}
+					{# this is where movie_id comes from #}
+					<li><a href="{% url 'start:detail' movie.id %}">{{movie.title}}</a></li>
+					{% endfor %}
+				</ul>
+			</body>
+		</div>
+	</div>
+</div>

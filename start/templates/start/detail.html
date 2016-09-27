@@ -1,0 +1,46 @@
+{% load staticfiles %}
+<html>
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<link rel="stylesheet" type="text/css" href="{% static 'start/style.css' %}" />
+
+<div class="container">
+    
+    <div class="row-centered">
+    <h1>{{ movie.title }}</h1>
+    <br>
+        <div class="col-md-3">
+            <img src="{{path}}" class="img-responsive">
+        </div>
+        <div class="col-md-9 col-centered">
+            <table class="table">
+                <tbody>
+                    <tr>
+                        <td><b>Title</b></td>
+                        <td>{{movie.title}}</td>
+                    </tr>
+                    <tr>
+                        <td><b>Release Year</b></td>
+                        <td>{{movie.year}}</td>
+                    </tr>
+                    <tr>
+                        <td><b>Director</b></td>
+                        <td>{{movie.director}}</td>
+                    </tr>
+                    <tr>
+                        <td><b>Average Rating</b></td>
+                        <td>{{movie.average_rating}}</td>
+                    </tr>
+                    <tr>
+                        <td><b>Plot Description</b></td>
+                        <td>{{movie.plot_description}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+</html>

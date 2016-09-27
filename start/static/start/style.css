@@ -1,0 +1,65 @@
+header {
+  /*min-height: 30px;
+  width: 100%;
+  background-color: #0288D1;*/
+}
+
+body {
+/*  float: none;
+  margin: 0 auto;
+  */ /* max-width: 300px;*/
+  
+  /*font-size: 20px;*/
+  /*background: #03A9F4;*/
+  /*font-family: 'Lato', sans-serif;*/
+}
+
+h1 {
+  /*color: #FFF;*/
+  /*font-size: 2.5em;*/
+}
+
+h2, a, #text{
+  /*color: #FFF;*/
+}
+
+h4{
+  /*text-decoration: underline;*/
+}
+
+.bigger{
+  font-size: 1.5em;
+}
+
+h3{
+
+}
+
+.table tbody tr td, .table tbody tr th, .table thead tr th {
+  border: none;
+}
+
+/* http://www.minimit.com/articles/solutions-tutorials/bootstrap-3-responsive-centered-columns */
+.row-centered {
+  text-align:center;
+}
+.col-centered {
+  display:inline-block;
+  float:none;
+  /* reset the text-align */
+  text-align:left;
+  /* inline-block space fix */
+  margin-right:-4px;
+}
+
+.center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*centre bullets */
+ul {
+  display: inline-block;
+  text-align:left;
+}
